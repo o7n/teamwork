@@ -30,9 +30,6 @@
         "psr-4": {
             "Mpociot\\Teamwork\\": "src/"
         },
-        "files": [
-            "src/helpers.php"
-        ]
     },
     "autoload-dev": {
         "classmap": [
