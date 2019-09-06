@@ -1,5 +1,5 @@
 {
-    "name": "o7n/teamwork",
+    "name": "mpociot/teamwork",
     "license": "MIT",
     "description": "User to Team associations for the Laravel 5 Framework",
     "keywords": ["Teams","Invite"],
