@@ -3,7 +3,7 @@
 namespace Mpociot\Teamwork\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Console\DetectsApplicationNamespace;
+use Illuminate\Container\Container;
 
 class MakeTeamwork extends Command
 {
@@ -77,7 +77,7 @@ class MakeTeamwork extends Command
                 app_path('Listeners/Teamwork/JoinTeamListener.php'),
                 str_replace(
                     '{{namespace}}',
-                    $this->getAppNamespace(),
+                    Container::getInstance()->getNamespace(),
                     file_get_contents(__DIR__ . '/../../../stubs/listeners/JoinTeamListener.stub')
                 )
             );
@@ -141,7 +141,7 @@ class MakeTeamwork extends Command
     {
         return str_replace(
             '{{namespace}}',
-            $this->getAppNamespace(),
+            Container::getInstance()->getNamespace(),
             file_get_contents(__DIR__.'/../../../stubs/controllers/'.$stubName.'.stub')
         );
     }
