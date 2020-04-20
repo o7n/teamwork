@@ -8,8 +8,6 @@ use Illuminate\Container\Container;
 class MakeTeamwork extends Command
 {
 
-    use DetectsApplicationNamespace;
-
     /**
      * The name and signature of the console command.
      *
